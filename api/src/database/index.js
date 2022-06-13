@@ -1,14 +1,14 @@
-require('dotenv').config()
+// require('dotenv').config()
 
 const Sequelize = require("sequelize");
 
-const DB_NAME = process.env.DB_NAME;
-const DB_USER = process.env.DB_USER;
-const DB_PASS = process.env.DB_PASSWORD;
+const DB_NAME = "parrot_social";
+const DB_USER = "root";
+const DB_PASS = "sottjrdb";
 const DB_CONFIG = {
-  dialect: process.env.DB_DIALECT,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
+  dialect: "mysql",
+  host: "sottjr-db.cnmu2vzs9qad.sa-east-1.rds.amazonaws.com",
+  port: "3306",
 };
 
 let db = {};
