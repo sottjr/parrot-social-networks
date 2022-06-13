@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16",
+    "sequelize-cli": "^6.4.1"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
+  },
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sottjr/parrot-social-networks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sottjr/parrot-social-networks/issues"
+  },
+  "homepage": "https://github.com/sottjr/parrot-social-networks#readme",
+  "description": ""
+}
