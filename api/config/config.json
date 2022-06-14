@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
+    "password": "sottjrdb",
+    "database": "parrot_social",
+    "host": "sottjr-db.cnmu2vzs9qad.sa-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {

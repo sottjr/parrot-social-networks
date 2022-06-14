@@ -2,28 +2,21 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('User', {
-      user_id: {
-        allowNull: false,
+    await queryInterface.createTable('Post', {
+      post_id: {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING(70)
-      },
-      email: {
-        type: Sequelize.STRING(70)
-      },
-      apartment: {
-        type: Sequelize.INTEGER
-      },
-      password: {
+      user_id:{
+        type: Sequelize.INTEGER,
         allowNull: false,
-        type: Sequelize.STRING(120)
+        references: { model: 'User', key: "user_id" },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
-      admin: {
-          type: Sequelize.BOOLEAN
+      content: {
+        type: Sequelize.STRING(300)
       },
       createdAt: {
         allowNull: false,
@@ -37,6 +30,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('User');
+    await queryInterface.dropTable('Post');
   }
 };
