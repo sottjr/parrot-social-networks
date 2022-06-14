@@ -1,17 +1,14 @@
 import React from 'react';
 import Container from '../../components/Container';
 import Header from '../../components/Header';
+import ProfileUser from '../../components/Profile'
 
-import * as S from "./styled";
-
-// import { Container } from './styles';
 
 const Profile: React.FC = () => {
   return (
     <Container>
-        {/* {Header} */}
         <Header/>
-
+        <ProfileUser/>
     </Container>
 );
 }

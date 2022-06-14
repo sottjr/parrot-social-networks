@@ -5,7 +5,7 @@ import * as S from "./styled";
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <S.HeaderContainer>
       <div>
         <img src={logo} alt="Parrot Social Network"/>
       </div>
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </S.HeaderContainer>
   );
 }
 
