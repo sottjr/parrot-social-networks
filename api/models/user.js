@@ -8,13 +8,15 @@ const User = db.define(
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      unique: true,
     },
     name: {
       type: DataTypes.STRING
     },
     email: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      unique: true,
     },
     apartment: {
       type: DataTypes.INTEGER
@@ -24,7 +26,8 @@ const User = db.define(
       type: DataTypes.STRING
     },
     admin: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     },
     createdAt: {
       allowNull: true,

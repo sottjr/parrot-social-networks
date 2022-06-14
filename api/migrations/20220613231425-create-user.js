@@ -7,13 +7,15 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        unique: true,
       },
       name: {
         type: Sequelize.STRING(70)
       },
       email: {
-        type: Sequelize.STRING(70)
+        type: Sequelize.STRING(70),
+        unique: true,
       },
       apartment: {
         type: Sequelize.INTEGER
@@ -21,9 +23,11 @@ module.exports = {
       password: {
         allowNull: false,
         type: Sequelize.STRING(120)
+        
       },
       admin: {
-          type: Sequelize.BOOLEAN
+          type: Sequelize.BOOLEAN,
+          defaultValue: false
       },
       createdAt: {
         allowNull: false,
