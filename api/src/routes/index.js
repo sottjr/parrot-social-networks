@@ -1,3 +1,8 @@
-const routes = require('express').Router();
+const express = require("express")
+const routes = express.Router()
+const UsuarioController = require("../controllers/usuario.controller")
 
-routes.post()
+
+routes.post("/CadUser",UsuarioController.create )
+
+module.exports = routes

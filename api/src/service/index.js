@@ -1,3 +1,5 @@
-import { UsuarioService } from "./UsuarioService";
+const UsuarioService = require("./UsuarioService")
 
-export const usuarioService = new UsuarioService
+const usuarioService = new UsuarioService
+
+module.exports = usuarioService

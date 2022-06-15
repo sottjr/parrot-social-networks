@@ -1,29 +1,26 @@
-import { User } from "../models/user";
-import bcrypt from "bcryptjs"
+const User = require("../models/user")
+const bcrypt = require("bcryptjs")
 
-export class UsuarioService {
+
+class UsuarioService {
 
     async registerUser(data){
-        const { senha } = data
-    
+        const { password } = data
+        console.log("aqui")
         const newUser = await User.create({
             ...data,
-            senha: this.criptoSenha(senha),
+            password: this.criptoSenha(password),
         
         })
-    
+        
         return newUser
     
     }
     
-    criptoSenha(senha){
-        const newSenha = bcrypt.hashSync( senha, 8)
+    criptoSenha(password){
+        const newSenha = bcrypt.hashSync( password)
         return newSenha
     }
-
 }
 
-
-
-
-
+module.exports = UsuarioService
