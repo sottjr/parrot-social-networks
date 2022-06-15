@@ -1,19 +1,21 @@
 import styled from 'styled-components';
-import { Button, InputGroupProps } from 'react-bootstrap';
+import { Button, InputGroup, InputGroupProps } from 'react-bootstrap';
 import img from '../../assets/background.jpeg';
 
 export const SingUpContainer = styled.main`
     height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     background-image: url(${img});
+
 `
 
 export const SingUpForm = styled.div`
-    background-color: coral;
+    background-color: #FFFFFF;
     padding: 20px 50px 20px 50px;
 `
 
@@ -42,7 +44,7 @@ export const FormInput = styled.input`
     text-align: center;
 `
 
-export const FormButon = styled.button`
+export const FormButon = styled(Button)`
     margin-top: 15%;
     padding: 4px 66px;
     font-size: 15px;

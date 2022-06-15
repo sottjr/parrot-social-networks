@@ -6,25 +6,26 @@ import * as S from "./styled";
 const Header: React.FC = () => {
   return (
     <S.HeaderContainer>
-      <div>
-        <img src={logo} alt="Parrot Social Network"/>
-      </div>
+      <S.HeaderNavbar>
+        <S.HeaderLogo>
+          <S.Logo src={logo} alt="Parrot Social Network"/>
+        </S.HeaderLogo>
+        <div>
+          <ul>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
 
-      <nav>
-        <ul>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
+              <li>
+                <Link to="/cadastro">Cadastro</Link>
+              </li>
 
-          <li>
-            <Link to="/cadastro">Cadastro</Link>
-          </li>
-
-          <li>
-            <Link to="/perfil">Perfil</Link>
-          </li>
-        </ul>
-      </nav>
+              <li>
+                <Link to="/perfil">Perfil</Link>
+              </li>
+            </ul>
+          </div>
+      </S.HeaderNavbar>
     </S.HeaderContainer>
   );
 }
