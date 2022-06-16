@@ -15,7 +15,7 @@ const baseURL = axios.create({
 
 export const postSingUp = async ({name, email, password, confirmPassword, address, photo}: SingUp) => {
     try {
-        const response = await baseURL.post("/cadastros", {name, email, password, confirmPassword, address, photo})
+        const response = await baseURL.post("/cadastrar", {name, email, password, confirmPassword, address, photo})
         return response.data
     } catch {
         throw new Error("Não foi possivel realizar o cadastro")

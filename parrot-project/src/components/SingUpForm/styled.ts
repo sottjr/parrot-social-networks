@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import { Button, InputGroup, InputGroupProps } from 'react-bootstrap';
 import img from '../../assets/background.png';
 import Form from 'react-bootstrap/Form'
+import { Link } from "react-router-dom";
+
+interface Props {
+    active: string;
+    to: string;
+}
 
 export const SingUpContainer = styled.main`
     height: 100%;

@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import { Button, InputGroup, InputGroupProps } from 'react-bootstrap';
 import img from '../../assets/background.png';
 import Form from 'react-bootstrap/Form'
+import { Link } from "react-router-dom";
+
+interface Props {
+    active: string;
+    to: string;
+}
 
 export const LoginContainer = styled.main`
     height: 100%;
@@ -61,6 +67,13 @@ export const FormButon = styled(Button)`
     line-height: 24.72px;
 `
 
-export const FormText = styled.a` 
-    margin-top: 5%;
+export const FormLink = styled(Link)<Props>` 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 10%;
+    color: #555555;
+    line-height: 18.54px;
+    font-size: 15px;
 `

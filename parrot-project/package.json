@@ -8,13 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
     "formik": "^2.2.9",
-=======
     "json-server-auth": "^2.1.0",
->>>>>>> 059d596ef2af87afeceb411a4c6fe7f967155629
     "react": "^18.0.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.0.0",

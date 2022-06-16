@@ -2,10 +2,7 @@ import styled from 'styled-components';
 import {Navbar} from 'react-bootstrap';
 
 export const HeaderContainer = styled.header`
-<<<<<<< HEAD
     display: flex;
-`
-=======
     position: fixed;
     width: 100%;
     top: 0;
@@ -32,4 +29,3 @@ export const Logo = styled.img`
     max-width: 100%;
     max-height: 100%;
 `
->>>>>>> 059d596ef2af87afeceb411a4c6fe7f967155629

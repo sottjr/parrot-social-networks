@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import logo from '../../assets/logo2.png';
 import * as S from './styled';
 
 const LoginForm: React.FC = () => {
+  
+  const location = useLocation()
+  useEffect(() => {console.log(location.pathname)},[location.pathname])
+
   return (
     <S.LoginContainer>
       <S.FormContainer>
@@ -28,7 +33,7 @@ const LoginForm: React.FC = () => {
 
         </S.LoginForm>
 
-        <S.FormText href="#">Não tem uma conta? Registre-se</S.FormText>
+        <S.FormLink active={location.pathname} to="/cadastro">cadastre-se</S.FormLink>
 
       </S.FormContainer>
     </S.LoginContainer>
