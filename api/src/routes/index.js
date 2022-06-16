@@ -10,4 +10,6 @@ routes.post("/login", AuthController.login)
 
 routes.post("/newpost", auth)
 
+routes.put("/atualizar/:id", UsuarioController.update)
+
 module.exports = routes

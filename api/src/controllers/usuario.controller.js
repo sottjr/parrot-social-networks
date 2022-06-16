@@ -20,14 +20,14 @@ const usuarioService = require("../service/UsuarioService")
     async update(req, res) {
       try {
         const { id } = req.params;
-        const { senha } = req.body;
+        const { password } = req.body;
         const payloadUpdate = {};
   
         Object.assign(payloadUpdate, req.body);
   
-        if (senha) {
-          const newSenha = bcrypt.hashSync(senha, 10);
-          Object.assign(payloadUpdate, { senha: newSenha });
+        if (password) {
+          const newPassword = bcrypt.hashSync(password);
+          Object.assign(payloadUpdate, { password: newPassword });
         }
   
         await User.update(payloadUpdate, {
@@ -61,9 +61,9 @@ const usuarioService = require("../service/UsuarioService")
     async getOne(req, res) {
       try {
         const { id } = req.params;
-        const psicologo = await Psicologos.findByPk(id);
+        const user = await User.findByPk(id);
   
-        return res.json(psicologo);
+        return res.json(user);
       } catch (error) {
         return res.status(500).json("Algo errado aconteceu,chame o batman!");
       }
