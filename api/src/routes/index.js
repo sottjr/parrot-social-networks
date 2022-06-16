@@ -1,3 +1,5 @@
-const routes = require('express').Router();
+const express = require('express');
+const controllerUser = require('./../controllers/controllerUser');
+const router = express.Router();
 
-routes.post()
+router.post("/register", controllerUser.registerUser);
