@@ -1,9 +1,7 @@
-const expressJWT = require("express-jwt");
-const secret = require("../database/config/secret");
-console.log(typeof(expressJWT))
+const {expressjwt} = require("express-jwt")
+const secret = require("../database/config/configs/secret")
 
-module.exports = expressJWT({
+module.exports = expressjwt({
     secret: secret.key,
-    algorithms: ["HS256"],
-});
-console.log(typeof(expressJWT))
+    algorithms: ["HS256"]
+})

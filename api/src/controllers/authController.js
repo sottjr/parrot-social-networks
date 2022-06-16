@@ -1,7 +1,7 @@
 const User = require("../models/user")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
-const secret = require("../database/config/secret")
+const secret = require("../database/config/configs/secret")
 
 const AuthController = {
     async login(req, res){
