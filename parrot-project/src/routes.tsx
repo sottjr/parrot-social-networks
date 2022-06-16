@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import SingUp from './pages/SingUp';
 import Profile from './pages/Profile';
+import Feed from './pages/Feed';
 
 const MyRoutes: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const MyRoutes: React.FC = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/cadastro' element={<SingUp/>}/>
-            <Route path='/perfil' element={<Profile/>}/>
+            <Route path='/perfil' element={<Feed/>}/>
         </Routes>
     </BrowserRouter>
   );
