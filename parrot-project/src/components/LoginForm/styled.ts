@@ -60,3 +60,7 @@ export const FormButon = styled(Button)`
     background-color: #76BB4C;
     line-height: 24.72px;
 `
+
+export const FormText = styled.a` 
+    margin-top: 5%;
+`

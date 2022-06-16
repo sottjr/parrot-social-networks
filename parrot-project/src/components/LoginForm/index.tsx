@@ -27,6 +27,9 @@ const LoginForm: React.FC = () => {
           <S.FormButon>entrar</S.FormButon>
 
         </S.LoginForm>
+
+        <S.FormText href="#">Não tem uma conta? Registre-se</S.FormText>
+
       </S.FormContainer>
     </S.LoginContainer>
   );
