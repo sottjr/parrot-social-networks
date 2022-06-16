@@ -2,20 +2,21 @@ const User = require("../models/user")
 const bcrypt = require("bcryptjs")
 
 
-class UsuarioService {
-
+const UsuarioService = {
+    
     async registerUser(data){
         const { password } = data
-        console.log("aqui")
+        
         const newUser = await User.create({
             ...data,
             password: this.criptoSenha(password),
         
-        })
-        
+        }
+        )
+        console.log("aqui 1 ")
         return newUser
     
-    }
+    },
     
     criptoSenha(password){
         const newSenha = bcrypt.hashSync( password)
