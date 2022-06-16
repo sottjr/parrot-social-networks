@@ -51,6 +51,24 @@ const postController = {
             console.log(error)
             return res.status(error).json
         }
+    },
+    async deletePost (req, res) {
+
+        try {
+            const { id } = req.params
+
+            await Post.destroy ({
+                where: {
+                    post_id: id
+                }
+            })
+
+            return res.status(204).json
+            
+        } catch (error) {
+            console.log(error)
+            return res.status(error).json
+        }
     }
 
 }
