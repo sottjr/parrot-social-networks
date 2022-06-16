@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { Button, InputGroup, InputGroupProps } from 'react-bootstrap';
-import img from '../../assets/background.jpeg';
+import img from '../../assets/background.png';
+import Form from 'react-bootstrap/Form'
 
 export const SingUpContainer = styled.main`
-    height: auto;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,10 +12,13 @@ export const SingUpContainer = styled.main`
     align-items: center;
     margin: 0 auto;
     background-image: url(${img});
-
+    background-size: 100%;
+    background-repeat: no-repeat;
 `
 
-export const SingUpForm = styled.div`
+export const FormContainer = styled.div`
+    margin-top: 5%;
+    margin-bottom: 2%;
     background-color: #FFFFFF;
     padding: 20px 50px 20px 50px;
 `
@@ -30,7 +34,7 @@ export const SingUpTittle = styled.p`
     text-align: center;
 `
 
-export const Form = styled.form`
+export const SingUpForm = styled(Form)`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,17 +42,21 @@ export const Form = styled.form`
 `
 
 export const FormInput = styled.input`
-    margin: 5%;
+    margin: 4%;
     border-radius: 5px;
     border: 1px solid #909090;
     text-align: center;
+    padding: 5px 10px;
+    font-size: 15px;
 `
 
 export const FormButon = styled(Button)`
-    margin-top: 15%;
-    padding: 4px 66px;
+    margin-top: 10%;
+    padding: 4px 70px;
     font-size: 15px;
+    font-weight: 700;
     border-radius: 5px;
     border: none;
     background-color: #76BB4C;
+    line-height: 24.72px;
 `

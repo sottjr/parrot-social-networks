@@ -34,10 +34,10 @@ const SingUpForm: React.FC = () => {
 
   return (
     <S.SingUpContainer>
-      <S.SingUpForm>
+      <S.FormContainer>
         <S.SingUpLogo src={Logo} alt="Parrot"/>
         <S.SingUpTittle>{"CADASTRO"}</S.SingUpTittle>
-        <S.Form >
+        <S.SingUpForm >
 
           <S.FormInput
             type='text'
@@ -87,8 +87,8 @@ const SingUpForm: React.FC = () => {
           />
 
           <S.FormButon type='submit'>entrar</S.FormButon>
-        </S.Form>
-      </S.SingUpForm>
+        </S.SingUpForm>
+      </S.FormContainer>
     </S.SingUpContainer>
   );
 }
