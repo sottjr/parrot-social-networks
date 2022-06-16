@@ -1,6 +1,6 @@
 const User = require("../models/user")
 const bcrypt = require("bcryptjs")
-const usuarioService = require("../service")
+const usuarioService = require("../service/usuarios")
 
  const UsuarioController = {
     async create(req, res) {
