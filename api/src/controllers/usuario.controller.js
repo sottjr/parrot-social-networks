@@ -1,15 +1,10 @@
-//import { User } from "../models/user"
-//import bcrypt from "bcryptjs"
-//import { usuarioService } from "../service"
-
 const User = require("../models/user")
 const bcrypt = require("bcryptjs")
 const usuarioService = require("../service")
-const { req, res} = require("express")
 
  const UsuarioController = {
     async create(req, res) {
-        console.log(req.body)
+       
         try {
     
           const newUser = await usuarioService.registerUser(req.body)
@@ -72,7 +67,7 @@ const { req, res} = require("express")
         }
       },
     
-      async getOne(req, res) {
+      async login(req, res) {
         try {
           const { id } = req.params;
           const user = await User.findByPk(id);
