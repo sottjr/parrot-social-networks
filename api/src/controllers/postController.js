@@ -1,4 +1,4 @@
-import { Post, User } from '../models'
+const{ Post, User } =require("../models")
 
 
 const postController = {

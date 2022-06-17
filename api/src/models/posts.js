@@ -1,7 +1,7 @@
-const db = require("../index");
+const db = require("../database");
 const { DataTypes } = require("sequelize");
 
-const tableUser = require('./user.js')
+const tableUser = require('./User.js')
 
 const Post = db.define(
   "Post",
@@ -32,7 +32,7 @@ const Post = db.define(
     }
   },
   {
-    tableName: "post",
+    tableName: "Post",
   }
 );
 
