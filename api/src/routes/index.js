@@ -13,7 +13,6 @@ routes.get("/getOne/:user_id", UsuarioController.getOne)
 routes.get("/listar", UsuarioController.getAll)
 routes.delete("/deletar/usuario/:user_id", UsuarioController.delete)
 
-routes.post("/CadUser",UsuarioController.create);
 routes.post("/posts/create", PostController.createPost);
 routes.get("/posts/list", PostController.listingPost);
 routes.delete("/posts/delete/:id", PostController.deletePost);

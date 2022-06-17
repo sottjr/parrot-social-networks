@@ -75,7 +75,7 @@ const usuarioService = require("../service/UsuarioService")
   
         return res.json(user);
       } catch (error) {
-        return res.status(500).json("Algo errado aconteceu,chame o batman!");
+        return res.status(500).json("Algo errado aconteceu.");
       }
     },
 
