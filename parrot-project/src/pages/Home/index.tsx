@@ -1,7 +1,8 @@
 import React from 'react';
 import Container from '../../components/Container';
 import LoginForm from '../../components/LoginForm';
-import Postvazio from '../../components/PostVazio';
+import Post from '../../components/Post';
+
 
 
 const Home: React.FC = () => {
