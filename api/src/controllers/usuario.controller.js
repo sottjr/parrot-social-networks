@@ -1,87 +1,83 @@
-//import { User } from "../models/user"
-//import bcrypt from "bcryptjs"
-//import { usuarioService } from "../service"
-
 const User = require("../models/user")
-const bcrypt = require("bcryptjs")
-const usuarioService = require("../service")
-const { req, res} = require("express")
+//const bcrypt = require("bcryptjs")
+const usuarioService = require("../service/UsuarioService")
 
  const UsuarioController = {
     async create(req, res) {
-        console.log(req.body)
-        try {
+  
+      try {
+
+      const newUser = await usuarioService.registerUser(req.body)
+
+      return res.status(201).json(newUser)
+        
+      } catch (error) {
+
+        return res.status(500).json("Algo errado aconteceu. Criando");
+      }
+    },
     
-          const newUser = await usuarioService.registerUser(req.body)
-    
-          return res.status(201).json(newUser);
-        } catch (error) {
-          return res.status(500).json("Algo errado aconteceu. Criando");
-        }
-      },
-    
-      async update(req, res) {
-        try {
-          const { id } = req.params;
-          const { senha } = req.body;
-          const payloadUpdate = {};
-    
-          Object.assign(payloadUpdate, req.body);
-    
-          if (senha) {
-            const newSenha = bcrypt.hashSync(senha, 10);
-            Object.assign(payloadUpdate, { senha: newSenha });
+    async update(req, res) {
+      try {
+        const { user_id } = req.params
+        console.log(user_id)
+        const { name, email, apartment } = req.body
+
+        const usuarioAtualizado = await User.update(
+          {
+            name,
+            email,
+            apartment,
+          },
+          {
+            where:{
+              user_id,
+            }
           }
-    
-          await User.update(payloadUpdate, {
-            where: { id },
-          });
-    
-          const user = await User.findByPk(id);
-    
-          return res.status(200).json(user);
-        } catch (error) {
-          return res.status(500).json("Algo errado aconteceu. Upando")
-        }
-      },
+        )
 
-      async delete(req, res) {
-        try {
-          const { id } = req.params;
-    
-          await User.destroy({
-            where: {
-              id,
-            },
-          });
-    
-          return res.sendStatus(204);
-        } catch (error) {
-          return res.status(500).json("Algo errado aconteceu. Deletando");
-        }
-      },
 
-      async getAll(req, res) {
-        try {
-          const users = await User.findAll();
-    
-          return res.json(users);
-        } catch (error) {
-          console.log(error);
-          return res.status(500).json("Algo errado aconteceu. Pegando geral.");
-        }
-      },
-    
-      async getOne(req, res) {
-        try {
-          const { id } = req.params;
-          const user = await User.findByPk(id);
-    
-          return res.json(user);
-        } catch (error) {
-          return res.status(500).json("Algo errado aconteceu. Pegando um.");
-        }
-      },
+        return res.status(200).json(usuarioAtualizado);
+      } catch (error) {
+        return res.status(500).json("Algo errado aconteceu.Upando")
+      }
+    },
+
+    async delete(req, res) {
+      try {
+        const { user_id } = req.params;
+  
+        await User.destroy({
+          where: {
+            user_id,
+          },
+        });
+  
+        return res.sendStatus(204);
+      } catch (error) {
+        return res.status(500).json("Algo errado aconteceu.Deletando");
+      }
+    },
+
+    async getAll(req,res){
+      try{
+        const usuarios = await User.findAll()
+        return res.json(usuarios)
+      } catch (error){
+        return res.status(500).json("Algo deu errado com ao buscar todos os usuarios")
+      }
+    },
+
+    async getOne(req, res) {
+      try {
+        const { user_id } = req.params;
+        const user = await User.findByPk(user_id);
+  
+        return res.json(user);
+      } catch (error) {
+        return res.status(500).json("Algo errado aconteceu,chame o batman!");
+      }
+    },
 
 }
 

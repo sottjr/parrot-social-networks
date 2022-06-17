@@ -1,4 +1,4 @@
-const UsuarioService = require("./UsuarioService")
+const UsuarioService = require("../UsuarioService")
 
 const usuarioService = new UsuarioService
 
