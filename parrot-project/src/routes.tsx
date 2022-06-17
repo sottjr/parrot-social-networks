@@ -3,7 +3,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SingUp from './pages/SingUp';
-import Profile from './pages/Profile';
 import Feed from './pages/Feed';
 
 const MyRoutes: React.FC = () => {

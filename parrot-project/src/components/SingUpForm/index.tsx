@@ -98,7 +98,7 @@ const SingUpForm: React.FC = () => {
             onChange={formik.handleChange}
           />
 
-          <S.FormButon type='submit' onSubmit={formik.handleSubmit}>entrar</S.FormButon>
+          <S.FormButon type='submit'>entrar</S.FormButon>
         </S.SingUpForm>
       </S.FormContainer>
     </S.SingUpContainer>

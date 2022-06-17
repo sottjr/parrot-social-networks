@@ -1,13 +1,13 @@
 import React from 'react';
 import Container from '../../components/Container';
-import Header from '../../components/Header';
+import LoginForm from '../../components/LoginForm';
 import Postvazio from '../../components/PostVazio';
 
 
 const Home: React.FC = () => {
   return (
     <Container>
-        <Header/>
+        <LoginForm />
     </Container>
 );
 }

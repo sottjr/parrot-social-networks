@@ -6,7 +6,7 @@ import * as S from "./styled";
 
 const Profile: React.FC = () => {
   return (
-    <img src={icone} alt="Parrot Social Network"/>
+    <img src={logo} alt="Parrot Social Network"/>
   )
 }
 
