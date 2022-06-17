@@ -1,0 +1,27 @@
+.sessao-publi{
+    display: flex;
+    padding: 20px;
+}
+
+.sessao-publi .pub-conteudo button{
+    background: #6033AA;
+    border-radius: 30px;
+    width: 164px;
+    height: 28px;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
+
+.sessao-publi .pub-conteudo textarea{
+    width: 542px;
+    height: 70px;
+    border: 2px solid #8BC34A;
+    border-radius: 10px;
+}
+.pub-conteudo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    align-items: end;
+}
