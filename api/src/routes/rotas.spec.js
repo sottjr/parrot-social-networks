@@ -20,15 +20,15 @@ describe("Teste de integração com a API - Usuários", ()=>{
         expect(res.status).toBe(200)
     }),
 
-//    test("Criando Usuário", async ()=>{
-//        const res = await supertest(app).post("/cadastrar").//send({
-//            name: "Moura",
-//            email: "jhm@jhm.com",
-//            apartment: "456",
-//            password: "987654321"
-//        })
-//        expect(res.status).toBe(201)
-//    })
+    test("Criando Usuário", async ()=>{
+        const res = await supertest(app).post("/cadastrar").send({
+            name: "Moura2",
+            email: "jhm@jhm2.com",
+            apartment: "45644",
+            password: "987654321"
+        })
+        expect(res.status).toBe(201)
+    })
 
     test("Atualizar usuário", async()=>{
         const res = await supertest(app).put("/atualizar/4").send({
@@ -58,11 +58,3 @@ describe("Teste de integração com a API - Usuários", ()=>{
     })
 
 })
-
-
-//
-
-//
-    //test("Deletar Post", ()=>{
-    //    const res = await supertest(app)
-    //})
