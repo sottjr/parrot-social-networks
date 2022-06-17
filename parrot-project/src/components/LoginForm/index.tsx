@@ -32,7 +32,7 @@ const LoginForm: React.FC = () => {
 
         </S.LoginForm>
 
-        <S.FormLink active={location.pathname}to="/perfil">Não tem uma conta? Registre-se</S.FormLink>
+        <S.FormLink active={location.pathname}to="/cadastro">cadastre-se</S.FormLink>
 
       </S.FormContainer>
     </S.LoginContainer>
