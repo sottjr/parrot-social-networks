@@ -7,4 +7,6 @@ app.use(express.json())
 db.hasConection();
 app.use(routes)
 
+module.exports = app
+
 app.listen(3000, () => console.log("Server running on port 3000"));
